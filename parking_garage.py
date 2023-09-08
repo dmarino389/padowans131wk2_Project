@@ -1,28 +1,35 @@
 
 # Initialize the Parking Garage Class
 # Create a class called ParkingGarage. 
-cost = {}
-# class ParkingGarage:  Uncomment this when you come back to it
-def __init__(self, parkingSpaces, tickets, currentTicket, cost = 5):
-    self.parkingSpaces = 4
-    self.tickets = {}
-    self.currentTicket = {}
+# cost = {}
+# # class ParkingGarage:  Uncomment this when you come back to it
+# def __init__(self, parkingSpaces, tickets, currentTicket, cost = 5):
+#     self.parkingSpaces = 4
+#     self.tickets = {}
+#     self.currentTicket = {}
 
 
 while True:
-    choice = (input('Do you want to take a ticket 1 = Y / 2 = N'))
-    if choice == 1:
-      print('Take your ticket')
-    elif choice == 2:
-       break
+    choice = input('Do you want to take a ticket? (1 = Y / 2 = N) ')
+    if choice == "1":
+        print('Take your ticket')
+    elif choice == "2":
+        break  # Exit the loop if the user chooses not to take a ticket
+    else:
+        print('Invalid choice. Please enter 1 to take a ticket or 2 to exit.')
+
+                 
        
 while True: 
-  print(f'You owe {cost}')
-  choice_pay = input('Enter the amount you owe ')
+  # print(f'You owe {cost}')
+  choice_pay = input('Enter your payment amount')
   if choice_pay == 5:
      print('Thank you for your purchase')
-  else:
-     print('Incorrect value, please try again')
+  elif choice_pay != 5:
+     print('Insufficient ammount')
+
+ 
+     
        
        
 
