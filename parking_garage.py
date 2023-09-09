@@ -13,18 +13,22 @@ while True:
     choice = input('Do you want to take a ticket? (1 = Y / 2 = N) ')
     if choice == "1":
         print('Take your ticket')
+        break  # Exit the loop when the user chooses 1
     elif choice == "2":
-        break  # Exit the loop if the user chooses not to take a ticket
+        print('Have a nice day')
+        quit()
     else:
         print('Invalid choice. Please enter 1 to take a ticket or 2 to exit.')
+
 
                  
        
 while True: 
-  # print(f'You owe {cost}')
-  choice_pay = input('Enter your payment amount')
+  print(f'You owe 5 dollars')
+  choice_pay = input('(Enter your payment amount) ')
   if choice_pay == 5:
      print('Thank you for your purchase')
+     break
   elif choice_pay != 5:
      print('Insufficient ammount')
 
