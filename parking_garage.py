@@ -1,12 +1,14 @@
 
 # Initialize the Parking Garage Class
 # Create a class called ParkingGarage. 
-# cost = {}
-# # class ParkingGarage:  Uncomment this when you come back to it
-# def __init__(self, parkingSpaces, tickets, currentTicket, cost = 5):
-#     self.parkingSpaces = 4
-#     self.tickets = {}
-#     self.currentTicket = {}
+
+class ParkingGarage: 
+    def __init__(self, parkingSpaces, tickets, currentTicket, cost = 5):
+     self.parkingSpaces = parkingSpaces
+     self.tickets = tickets
+     self.currentTicket = currentTicket
+     self.cost = cost
+    
 
 
 while True:
@@ -30,9 +32,12 @@ while True:
      print('Thank you for your purchase')
      break
   elif choice_pay != 5:
-     print('Insufficient ammount')
+     print('Insufficient ammount, please enter the correct amount')
+     break
 
- 
+
+
+
      
        
        
