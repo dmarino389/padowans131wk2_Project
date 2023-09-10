@@ -12,11 +12,13 @@ class ParkingGarage:
                            '****Parking is $5 all day****\n'
                                 '1 - Take your ticket\n'
                                 '2 - Pay your ticket\n'
-                                '3 - Quit\n'))
+                                
+                                '3 - Leave The Garage\n'))
         if choice == 1:
                 self.take_ticket()
         elif choice == 2:
             self.pay_for_parking()
+        
         elif choice == 3:
             print('Have a nice day.')
             break
@@ -30,7 +32,7 @@ class ParkingGarage:
         ticket = self.available_tickets.pop()
         # parking_spaces = self.available_parking_spaces.pop()
         self.current_tickets[ticket] = {'paid': False, 'available': False}
-        print(f'Your ticket is {ticket}. Please proceed.')
+        print(f'Your ticket is {ticket}. Please proceed to pay your ticket.')
         
     else:
        print('Sorry, but there is not tickets')
@@ -38,13 +40,14 @@ class ParkingGarage:
   def pay_for_parking(self):
     if self.current_tickets:
       print("Your total is 5") 
-      spot = int(input('What was your ticket number?'))
-      payment = int(input('Enter payment amount'))
+      spot = int(input('(What was your ticket number?) '))
+      payment = int(input('(Enter payment amount) '))
       if payment == 5:
         self.current_tickets[spot]['paid'] = True
         
         print('Payment recieved. You have 15 minutes to leave.')
         return True #if code wont work, try removing this return True
+    self.spot.ammend(self.available_tickets) #-------------------------------------------------------------------->
       else:
         print('Wrong amount')
     
