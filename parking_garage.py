@@ -3,7 +3,7 @@
 # Create a class called ParkingGarage. 
 
 class ParkingGarage: 
-    def __init__(self, parkingSpaces, tickets, currentTicket, cost = 5):
+    def __init__(self, parkingSpaces, tickets, currentTicket, cost):
      self.parkingSpaces = parkingSpaces
      self.tickets = tickets
      self.currentTicket = currentTicket
@@ -28,12 +28,12 @@ while True:
 while True: 
   print(f'You owe 5 dollars')
   choice_pay = input('(Enter your payment amount) ')
-  if choice_pay == 5:
+  if choice_pay ==5:
      print('Thank you for your purchase')
      break
-  elif choice_pay != 5:
-     print('Insufficient ammount, please enter the correct amount')
-     break
+  else:
+     print('Insufficient ammount, please start over')
+     
 
 
 
